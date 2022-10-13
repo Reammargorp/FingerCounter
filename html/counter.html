@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/counter.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <!-- Font Awsome Library -->
+    <link rel="stylesheet" href="../css/all.min.css">
+</head>
+<body>
+        <!-- Start Headre -->
+        <div class="header">
+            <audio id="aud" >
+                <source src="../audio/quran.mp3" type="audio/mpeg">
+                <source src="../audio/quran.mp3" type="audio/mpeg">
+                <source src="../audio/quran.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <div class="btns">
+                <div class="logo"> <a href="index.html">سبحة</a> </div>
+                <button id="quranAud"><i class="fas fa-quran"></i></button>
+            </div>
+            <button id="btnNavOpen"><i class="fas fa-bars"></i></button>
+    
+        </div>
+        <div style="transition:0.3s;"  class="showcase">
+            <button id="btnNavClose"><i class="fas fa-ban"></i></button>
+            <h2>(لآ اِلَهَ اِلّا اللّهُ مُحَمَّدٌ رَسُوُل اللّهِ)</h2>
+            <ul class="link">
+                    <li><a href="../index.html#prayer"><i class="fas fa-mosque"></i>مواقيت الصلاه</a></li>
+                    <li><a href="../index.html#speech"><i class="fas fa-book"></i>احاديث شريفه</a></li>
+                    <li><a href="../index.html#quran"> <i class="fas fa-quran"></i> القران الكريم</a></li>
+                    <li><a href="counter.html"><i class="fas fa-ring"></i> السبحه الاكترونيه</a></li>
+                </ul>
+        </div>
+        <!-- End Header -->
+        <!-- Start bbutton -->
+        <div class="button">
+            <div class="container">
+                <button class="btnT" id="btnT">0</button>
+                <button id="btn"></button>
+                <img src="/img/maincounter.png" alt="">
+                <div class="overlay"></div>
+                <button id="clear">clear</button>
+                <button id="led">led</button>
+            </div>
+        </div>
+        
+        <!-- End button -->
+        <!-- Start Footer -->
+        <div class="footer" id="footer">
+        <div class="container">
+            <div class="main-box">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+            <div class="last-box">
+                <!-- <h3>حقوق النشر © 2021 ياسين وليد هيكل - جميع الحقوق محفوظة</h3>
+                <p> <a href="mailto:yassienwyh0@gmail.com">email:yassienwyh0@gmail.com</a>  تصميم وتطيور ياسين وليد</p> -->
+                <h3>Copyright &#169; <script>let nowDate = new Date(); document.write(nowDate.getFullYear()); </script> Yassien Waleed Haikal - All Rights Reserved</h3>
+                <p> 
+                    Created and Designded By <a href="mailto:yassienwyh0@gmail.com">Yassien Waleed</a> 
+                    ; Email: <span><a href="mailto:ywyhinfo@gmail.com">ywyhinfo@gmail.com</a></span>
+                </p>
+            </div>
+        </div>
+        </div>  
+        <!-- End Footer -->
+        <script src="../js/main.js"></script>
+        <script>
+            let Div = document.querySelectorAll("div #btnT")
+        let btnT = document.querySelector("#btnT")
+        let btn =document.querySelector("#btn")
+        let led =document.querySelector("#led")
+        let clear = document.querySelector("#clear")
+        let overlay =document.querySelector(".overlay")
+        console.log(Div)
+        if(btnT.innerHTML <= 10) {
+            btnT.style.marginLeft = "6.5%";
+
+        }     else if (btnT.innerHTML <= 100) {
+            btnT.style.marginLeft = "13%"
+        } 
+        else if (btnT.innerHTML <= 1000) {
+            btnT.style.marginLeft = "19.5%"
+        }
+        console.log(btnT.innerHTML < 10)
+        if(window.localStorage.getItem("text")) {
+            btn.addEventListener("click" , function(e) {
+                window.localStorage.setItem("num" ,        btnT.innerHTML -= window.localStorage.getItem("text"))
+                window.localStorage.setItem("number" , btnT.innerHTML)
+                console.log(window.localStorage.getItem("num")) 
+            })
+        }
+
+        window.localStorage.setItem("text" ,-1)
+        window.onload=function() {
+            if(  window.localStorage.getItem("number")) {
+                btnT.innerHTML =  window.localStorage.getItem("number")
+            } else {
+            btnT.innerHTML = "0"
+            } 
+        }
+        clear.addEventListener("click" , function() {
+            btnT.innerHTML = "0"
+            // window.localStorage.clear()
+
+        })
+        led.addEventListener("click" , function() {
+            btnT.classList.toggle("active")
+        })
+
+        </script>
+</body>
+</html>

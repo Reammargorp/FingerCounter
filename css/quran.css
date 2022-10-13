@@ -1,0 +1,393 @@
+/* Start Global Rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "marcellus_scregular", serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+body {
+  transition: 0.3s;
+}
+:root {
+  --main-text-shadow: 0px 0px 15px rgb(0 0 0 / 55%);
+  --main-color: #25d366;
+  --main-color-alt: #4aae20;
+  --main-font-size: 30px;
+  --main-font-size-small: 18px;
+  --main-font-size-alt: 25px;
+  --main-transition: 0.3s;
+  --main-padding-top: 20px;
+  --main-padding-bottom: 100px;
+  --section--background: #d8d8d8;
+  --second-color: #10cab7;
+  --p-color: #888;
+  --line-height: 2;
+  --main-padding-text: 40px;
+  --main-padding-text-alt: 20px;
+  --main-opacity-color: #ffffff33;
+}
+html {
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  transition: var(--main-transition);
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+  border-radius: 4.5px;
+  height: 100px;
+  transition: 1s;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--main-color-alt);
+}
+::selection {
+  background-color: transparent;
+  color: gold;
+  background-color: black;
+  border-radius: 2px;
+}
+body {
+  font-family: "Cairo", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.special-heading {
+  color: var(--main-color-alt);
+  font-size: 50px;
+  text-transform: capitalize;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: -3;
+  margin: 0;
+  text-shadow: 2px 2px 2px var(--main-color);
+  margin-top: -50px;
+  margin-bottom: 80px;
+}
+.special-heading-quran {
+  font-size: var(--main-font-size-alt);
+  color: var(--p-color);
+  text-transform: capitalize;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: -3;
+  margin: 0;
+  margin-top: -50px;
+  margin-bottom: 30px;
+}
+/* small */
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* medium */
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* large */
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+input[type="range"] {
+  border-radius: 5px;
+  box-shadow: 0 12px 10px 0 rgb(0 0 0 / 5%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+  z-index: 5;
+  -webkit-appearance: none;
+  margin: 10px 0;
+  height: 4px;
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%);
+}
+@media (min-width: 1200px) {
+  input[type="range"] {
+    width: 10%;
+  }
+}
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border-radius: 7px;
+  background: white;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+input[type="range"]::-moz-slider-thumb {
+  height: 10px;
+  width: 15px;
+  border-radius: 50%;
+  border-radius: 7px;
+  background: black;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -3.6px;
+}
+/* Start header */
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--main-color);
+  max-height:6vh ;
+  text-shadow: var(--main-text-shadow);
+}
+.header #quranAud {
+  margin-left: 40px;
+  margin-right: -40px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  font-size: var(--main-font-size-alt);
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  .header #quranAud {
+    margin-left: 5px;
+    margin-right: 0px;
+  }
+}
+.header .btns {
+display: flex;
+flex-direction: row-reverse;
+justify-content: space-between;
+gap: 10rem;
+}
+@media (max-width: 767px) {
+  .header .btns {
+    gap: 3rem;
+
+  }
+}
+.header .logo {
+  cursor: pointer;
+}
+.header .logo a {
+  color: white;
+  font-size: var(--main-font-size);
+  font-weight: bolder;
+}
+.header #btnNavOpen {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: white;
+  cursor: pointer;
+  font-size: var(--main-font-size);
+  font-weight: bolder;
+  margin-right: 10rem;
+}
+@media (max-width: 767px) {
+  .header #btnNavOpen {
+    margin-right: 3;
+  }
+}
+.showcase {
+  background-color: #f5f5f5;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  min-height: 100vh;
+  background-color: white;
+  min-width: 300px;
+  max-width: 300px;
+  display: none;
+
+}
+.showcase.active {
+  display: block;
+}
+.showcase #btnNavClose {
+  text-align: center;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: black;
+  cursor: pointer;
+  font-size: var(--main-font-size);
+  font-weight: bolder;
+  margin-bottom: 3rem;
+}
+.showcase h2 {
+  color: black;
+  font-weight: bolder;
+  text-align: center;
+  font-size: 18px;
+  padding: 0 10px;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+}
+.showcase .link {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  font-weight: bolder;
+  text-shadow: var(--main-text-shadow);
+  direction: rtl;
+  gap: 2rem;
+}
+.showcase .link a {
+  font-size: 22px;
+  color: black;
+}
+.showcase .link a:hover i {
+  padding-left: 25px;
+}
+
+.showcase .link a i {
+  transition: var(--main-transition);
+  font-size: 22px;
+  padding-left: 15px;
+  margin-right: 15px;
+}
+
+/* End header */
+/* Start quran */
+.quran {
+  position: relative;
+}
+
+.quran .container {
+  direction: rtl;
+  padding: var(--main-padding-bottom) 0;
+}
+.quran .container .main-box .quran-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+  gap: 50px;
+  -webkit-box-shadow: 0 0 20px black;
+  box-shadow: 0 0 20px box-shadow 0 0 20px #6b6e6b;
+}
+.quran .container .main-box .quran-box p.first {
+  margin-top: 20px;
+  margin-bottom: -20px;
+}
+
+.quran .container .main-box .quran-box p {
+  background-color: white;
+  font-size: var(--main-font-size-alt);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-right: 20px;
+}
+.quran .container .main-box .quran-box p.active {
+  background-color: var(--section--background);
+  padding: calc(var(--main-padding-top) + 10px);
+}
+
+/* End quran */
+/* End quran */ 
+/* Start footer */
+.footer {
+  position: relative;
+  background-color: var(--main-color);
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.footer .container .main-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.footer .container .main-box a i {
+  color: white;
+  font-weight: bold;
+  font-size: calc(var(--main-font-size) + 5px);
+}
+.footer .container .last-box {
+  padding-top: 75px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.footer .container .last-box h3 {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+}
+
+.footer .container .last-box p {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.footer .container .last-box a {
+  color: white;
+}
+
+.footer .container .last-box p::first-letter {
+  text-transform: capitalize;
+}
+
+@media (min-width: 991px) {
+  .footer .container .last-box h3 {
+    position: absolute;
+    left: 2%;
+  }
+}
+@media (min-width: 991px) {
+  .footer .container .last-box p {
+    position: absolute;
+    right: 2%;
+  }
+}
+@media (max-width: 767px) {
+  .footer .container .last-box {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+/* End Footer */
+

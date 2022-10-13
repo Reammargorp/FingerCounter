@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>  
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <!-- Font Awsome Library -->
+    <link rel="stylesheet" href="../css/all.min.css">
+    <!-- Google Fonts -->
+    
+</head>
+<body>
+    <!-- Start Headre -->
+    <div class="header">
+        <audio id="aud" >
+            <source src="../audio/quran.mp3" type="audio/mpeg">
+            <source src="../audio/quran.mp3" type="audio/mpeg">
+            <source src="../audio/quran.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <div class="btns">
+            <div class="logo"> <a href="index.html">سبحة</a> </div>
+            <button id="quranAud"><i class="fas fa-quran"></i></button>
+        </div>
+        <button id="btnNavOpen"><i class="fas fa-bars"></i></button>
+
+    </div>
+    <div style="transition:0.3s;"  class="showcase">
+        <button id="btnNavClose"><i class="fas fa-ban"></i></button>
+        <h2>(لآ اِلَهَ اِلّا اللّهُ مُحَمَّدٌ رَسُوُل اللّهِ)</h2>
+        <ul class="link">
+                <li><a href="#prayer"><i class="fas fa-mosque"></i>مواقيت الصلاه</a></li>
+                <li><a href="#speech"><i class="fas fa-book"></i>احاديث شريفه</a></li>
+                <li><a href="#quran"> <i class="fas fa-quran"></i> القران الكريم</a></li>
+                <li><a href="./html/counter.html"><i class="fas fa-ring"></i> السبحه الاكترونيه</a></li>
+            </ul>
+    </div>
+    <!-- End Header -->
+    <!-- Start Prayer -->
+    <div class="prayer" id="prayer">
+        <div class="container">
+            <div class="main-box">
+                <div class="text-box">
+                    <h1>مواقيت الصلاه</h1>
+                    <h2>القاهره - مصر</h2>
+                    <h3 id="date">التاريخ الآن</h3>
+                    <br>
+                    <h3 id="date"><script>let dateNow = new Date();  document.write(`${dateNow.getMonth() + 1}` , "/" , `${dateNow.getDay()}` , "/" , `${dateNow.getFullYear()}`);</script></h3>
+                </div>
+                <div class="time-box">
+                    <div class="prayerText">
+                        <h3>الساعه الآن</h3>
+                        <h3><script>let date = new Date();  document.write(`${date.getHours()}` , ":" , `${date.getMinutes()}` , ":" , `${date.getSeconds()}`);</script></h3>
+                        <h2>باقي على الفجر</h2>
+                        <div class="time" style="direction: ltr; display: flex; justify-content: flex-end;"> <span class="hours">00</span> : <span class="minutes">13</span> : <span class="seconds">21</span></div>    
+                    </div>
+                    <div class="prayersTable">
+                        <div class="table">
+                            <p class="nameActive">الفجر</p>
+                            <div class="timeActive">05:11 <p>ص</p></div>
+                        </div>
+                        <div class="table">
+                            <p class="name">الشروق</p>
+                            <div class="time">06:42 <p>ص</p></div>
+                        </div>
+                        <div class="table">
+                            <p class="nameActive">الظهر</p>
+                            <div class="timeActive">11:50 <p>ص</p></div>
+                        </div>
+                        <div class="table">
+                            <p class="name">العصر</p>
+                            <div class="time">2:38 <p>م</p></div>
+                        </div>
+                        <div class="table ">
+                            <p class="nameActive">المغرب</p>
+                            <div class="timeActive">4:54 <p>م</p></div>
+                        </div>
+                        <div class="table">
+                            <p class="name">العشاء</p>
+                            <div class="time">6:21 <p>م</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- End Prayer -->
+    <!-- Start Speech -->
+    <div class="speech" id="speech">
+        <div class="container">
+            <div class="main-box">
+                <h2 class="special-heading">احاديث نبويه</h2>
+                <div class="btn-box">
+                    <button class="btnL"><i class="fas fa-chevron-left"></i></button>
+                    <button class="btnR"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div  class="speech-box active" id="speech-one">
+                    <h2 style="font-size:20px;">
+                        قال صلّى الله عليه وسلّم: (لَأَنْ يَحْتَطِبَ أَحَدُكُمْ حُزْمَةً علَى ظَهْرِهِ، خَيْرٌ له مِن أَنْ يَسْأَلَ أَحَدًا فيُعْطِيَهُ أَوْ يَمْنَعَهُ).[١٢]
+                    </h2>
+                </div>
+                <div  class="speech-box" id="speech-two">
+                    <h2 style="font-size:20px;">
+                        قال رسول الله صلى الله عليه وسلم: (إِذَا مَاتَ الإنْسَانُ انْقَطَعَ عنْه عَمَلُهُ إِلَّا مِن ثَلَاثَةٍ: إِلَّا مِن صَدَقَةٍ جَارِيَةٍ، أَوْ عِلْمٍ يُنْتَفَعُ بِهِ، أَوْ وَلَدٍ صَالِحٍ يَدْعُو له).[١]
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Speech -->
+    <!-- Start quran -->
+    <div class="quran" id="quran">
+        <h2 class="special-heading">القران الكريم</h2>
+        <div class="container">
+            <div class="main-box">
+                <div class="main-quran-box">
+                    <p class="p current">ألقرآن الكريم<i style="cursor: pointer;" id="main-quran-btn" class="fas fa-chevron-down"></i></p>
+                </div>
+                <div class="quran-box">
+                    <p >جزء عم<i id="quran-btn" class="fas fa-chevron-down"></i></p>
+                    <div class="quran-boxes">
+                        <div class="quran-boxs"><a href="./html/nba.html">سوره النبا</a></div>
+                        <div class="quran-boxs"><a href="./html/nba.html">سوره النازعات</a></div>
+                        <div class="quran-boxs"><a href="./html/nba.html">سوره عبس</a></div>
+                        <div class="quran-boxs"><a href="./html/nba.html">سوره التكوير</a></div>
+                        <div class="quran-boxs"><a href="./html/nba.html">سوره الانفطار</a></div>
+                        <div class="quran-boxs"><a href="./html/nba.html">سوره المطففين</a></div>
+                        <div class="quran-boxs"><a href="./html/nba.html">سوره الانشقاق</a></div>
+                        <div class="quran-boxs"><a href="./html/nba.html">سوره البروج</a></div>
+                        <div class="quran-boxs"><a href="./html/nba.html">سوره الطارق</a></div>
+                        <div class="quran-boxs"><a href="./html/nba.html">سوره الاعلى</a></div>
+                        <div class="quran-boxs"><a href="./html/nba.html">سوره الغاشيه</a></div>
+                        <div class="quran-boxs"><a href="./html/nba.html">سوره الفجر</a></div>
+                        <div class="quran-boxs"><a href="./html/nba.html">سوره البلد</a></div>
+                        <div class="quran-boxs"><a href="./html/nba.html">سوره الشمسم</a></div>
+                        <div class="quran-boxs"><a href="./html/nba.html">سوره الليل</a></div>
+                        <div class="quran-boxs"><a href="./html/nba.html">سوره الضحى</a></div>
+                        <div class="quran-boxs"><a href="./html/nba.html">سوره الشرح</a></div>
+                        <div class="quran-boxs"><a href="./html/nba.html">سوره التين</a></div>
+                        <div class="quran-boxs"><a href="./html/nba.html">سوره العلق</a></div>
+                        <div class="quran-boxs"><a href="./html/nba.html">سوره القدر</a></div>
+                        <div class="quran-boxs"><a href="./html/nba.html">سوره البينه</a></div>
+                        <div class="quran-boxs"><a href="./html/nba.html">سوره الزلزله</a></div>
+                        <div class="quran-boxs"><a href="./html/nba.html">سوره العاديات</a></div>
+                        <div class="quran-boxs"><a href="./html/nba.html">سوره القارعه</a></div>
+                        <div class="quran-boxs"><a href="./html/nba.html">سوره التكاثر</a></div>
+                        <div class="quran-boxs"><a href="./html/nba.html">سوره العصر</a></div>
+                        <div class="quran-boxs"><a href="./html/nba.html">سوره الهمزه</a></div>
+                        <div class="quran-boxs"><a href="./html/nba.html">سوره الفيل</a></div>
+                        <div class="quran-boxs"><a href="./html/nba.html">سوره قريش</a></div>
+                        <div class="quran-boxs"><a href="./html/nba.html">سوره الماعون</a></div>
+                        <div class="quran-boxs"><a href="./html/nba.html">سوره الكوثر</a></div>
+                        <div class="quran-boxs"><a href="./html/nba.html">سوره الكافرون</a></div>
+                        <div class="quran-boxs"><a href="./html/nba.html">سوره النصد</a></div>
+                        <div class="quran-boxs"><a href="./html/nba.html">سوره المسد</a></div>
+                        <div class="quran-boxs"><a href="./html/nba.html">سوره الاخلاص</a></div>
+                        <div class="quran-boxs"><a href="./html/nba.html">سوره الفلق</a></div>
+                        <div class="quran-boxs"><a href="./html/nba.html">سوره الناس</a></div>
+                    </div>
+                </div>
+
+                </div>
+        </div>
+    </div>
+    <!-- End quran -->
+    <!-- Start Footer -->
+    <div class="footer" id="footer">
+    <div class="container">
+        <div class="main-box">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+    </div>
+        <div class="last-box">
+            <!-- <h3>حقوق النشر © 2021 ياسين وليد هيكل - جميع الحقوق محفوظة</h3>
+            <p> <a href="mailto:yassienwyh0@gmail.com">email:yassienwyh0@gmail.com</a>  تصميم وتطيور ياسين وليد</p> -->
+            <h3>Copyright &#169; <script>let nowDate = new Date(); document.write(nowDate.getFullYear()); </script> Yassien Waleed Haikal - All Rights Reserved</h3>
+            <p> 
+                Created and Designded By <a href="mailto:yassienwyh0@gmail.com">Yassien Waleed</a> 
+                ; Email: <span><a href="mailto:ywyhinfo@gmail.com">ywyhinfo@gmail.com</a></span>
+            </p>
+        </div>
+    </div>
+    </div>  
+    <!-- End Footer -->
+    <script src="./js/main.js"></script>
+    <script>
+        let countDownDate = new Date("Dec 31, 2021 5:30:13").getTime();
+
+let counter = setInterval(() => {
+  // Get Date Now
+  let dateNow = new Date().getTime();
+
+  // Find The Date Difference Between Now And Countdown Date
+  let dateDiff = countDownDate - dateNow;
+
+  // Get Time Units
+  // let days = Math.floor(dateDiff / 1000 / 60 / 60 / 24);
+
+  let hours = Math.floor((dateDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let minutes = Math.floor((dateDiff % (1000 * 60 * 60)) / (1000 * 60));
+  let seconds = Math.floor((dateDiff % (1000 * 60)) / 1000);
+  document.querySelector(".hours").innerHTML = hours < 10 ? `0${hours}` : hours;
+  document.querySelector(".minutes").innerHTML = minutes < 10 ? `0${minutes}` : minutes;
+  document.querySelector(".seconds").innerHTML = seconds < 10 ? `0${seconds}` : seconds;
+
+  if (dateDiff < 0) {
+    clearInterval(counter);
+  }
+}, 1000);
+
+let btnR =document.querySelector(".btnR")
+    let btnL =document.querySelector(".btnL")
+    let speechOne = document.querySelectorAll(".speech-box")[0]
+    let speechTwo = document.querySelectorAll(".speech-box")[1]
+console.log(speechTwo)
+
+btnR.addEventListener("click", function() {
+    if(speechOne.classList.contains("active")) {
+        speechOne.classList.toggle("active")
+        speechTwo.classList.toggle("active")
+    } else {
+        speechOne.classList.toggle("active")
+        speechTwo.classList.toggle("active")
+    }
+})
+btnL.addEventListener("click", function() {
+    if(speechOne.classList.contains("active")) {
+        speechOne.classList.toggle("active")
+        speechTwo.classList.toggle("active")
+    } else {
+        speechOne.classList.toggle("active")
+        speechTwo.classList.toggle("active")
+    }
+})
+
+setInterval( function (){
+        speechOne.classList.toggle("active")
+        speechTwo.classList.toggle("active")
+},3000)
+
+
+
+let mainQuranBtn = document.querySelector("#main-quran-btn")
+
+let quranBox = document.querySelectorAll(".quran-box")
+console.log(quranBox)
+mainQuranBtn.onclick = function() {
+
+    if(mainQuranBtn.classList.value === "fas fa-chevron-down") {
+        mainQuranBtn.classList.remove("fas", "fa-chevron-down")  
+        mainQuranBtn.classList.add("fas","fa-chevron-up")     
+        for(let i = 0; i <31 ;i++) {
+            quranBox[i].classList.toggle("active")
+
+        }
+    }else { 
+        mainQuranBtn.classList.remove("fas","fa-chevron-up")     
+        mainQuranBtn.classList.add("fas", "fa-chevron-down")  
+        for(let i = 0; i <31 ;i++) {
+            quranBox[i].classList.toggle("active")
+
+        }
+    }
+}
+
+for(let i =0;i < 31;i++) {
+    let quranBtn = document.querySelectorAll("#quran-btn")
+    let quranBoxes = document.querySelectorAll(".quran-boxes")
+    console.log(quranBoxes)
+    quranBtn[i].onclick = function() {
+    
+        if(quranBtn[i].classList.value === "fas fa-chevron-down") {
+                quranBtn[i].classList.remove("fas", "fa-chevron-down")  
+                quranBtn[i].classList.add("fas","fa-chevron-up")     
+                quranBtn[i].classList.add("fas","fa-chevron-up")     
+                quranBoxes[i].classList.toggle("active")
+            
+            }
+        else {  
+            quranBtn[i].classList.remove("fas","fa-chevron-up")     
+            quranBtn[i].classList.add("fas", "fa-chevron-down")  
+            quranBoxes[i].classList.toggle("active")
+        }
+    }
+}
+
+///---------------
+
+    </script>
+</body>
+</html>
